@@ -201,22 +201,23 @@ video{
     }
 }
 
-.main{
-    color: white;
-    font-size: 6vh;
+.work-item.first > .paragraph > .main{
+    font-size: 3vh;
     font-weight: bold;
     padding-left: 1%;
     padding-right: 1%;
     text-align: center;
 }
 
-.sub {
-    color: white;
-    font-size: 3vh;
-    font-style: italic;
+.work-item.first > .paragraph >.sub {
+    font-size: 2vh;
     padding-left: 1%;
     padding-right: 1%;
     text-align: center;
+}
+
+.work-item.first > .paragraph >.sub.italic {
+    font-style: italic;
 }
 
 .arrowdown{
@@ -253,7 +254,16 @@ video {
 .work-item.first{
     padding: 2%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
 }
+
+.work-item.first > h1{
+    font-size: 5vh;
+    text-align: center;
+} 
 
 .work-item{
     position: relative;
@@ -262,6 +272,7 @@ video {
 
 .work-item > div > p {
     font-size: 2vh;
+    text-align: center;
 }
 
 .work-item > img {
@@ -316,8 +327,54 @@ video {
 }
 
 .paragraph{
-    height: 100%;
+    padding-top: 5vh;
     display: flex;
     flex-direction: column;
-    justify-self: center;
+}
+
+.modalC{
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 6px;
+    background-color: white;
+    padding: 2%;
+    /* background-image: url("images/modal.jpeg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 3px rgba(0, 0, 0, 0.5); */
+}
+
+.about {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 2%;
+}
+
+.about > .title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: black;
+    margin-bottom: 1%;
+}
+
+.about > p {
+    font-size: 2vh;
 }
