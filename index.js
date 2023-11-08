@@ -63,17 +63,11 @@ function container() {
 
 const header = document.getElementById("header");
 
-    window.addEventListener("scroll", () => {
+/*     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
         header.classList.add("scrolled");
       } else {
         header.classList.remove("scrolled");
       }
-    });
+    }); */
 
-const scrollButton = document.getElementById("scrollbutton");
-
-scrollButton.addEventListener("click", () => {
-    const headerHeight = document.getElementById("container").offsetHeight;
-    window.scrollBy(0, headerHeight);
-});
