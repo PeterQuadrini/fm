@@ -4,7 +4,7 @@ init();
 container();
 
 function init() {
-    document.body.style.overflowY = 'hidden'
+    document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
     var modal = document.getElementById("modalC");
     var modalH1 = document.getElementById("modal-h1");
     var modalP = document.getElementById("modal-p");
@@ -36,7 +36,7 @@ function buttonClick() {
     var video = document.getElementById("video");
     video.addEventListener('click', function () {
         console.log('ciiii')
-        document.body.style.overflowY = 'auto'
+        document.getElementsByTagName('body')[0].style.overflowY = 'auto'
         video.play()
     })
     video.click()
