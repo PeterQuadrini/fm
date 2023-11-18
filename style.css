@@ -565,3 +565,9 @@ button:hover {
     font-size: 1.5vh;
     text-align: center;
 }
+
+button:disabled,
+button[disabled]{
+  background-color: rgb(54, 54, 54);
+  color: rgb(139, 139, 139);
+}
