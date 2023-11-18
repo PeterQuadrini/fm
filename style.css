@@ -1,5 +1,9 @@
+* {
+    background-color: black;
+}
+
 body {
-    background-color: #1f1f1f;
+    background-color: black;
     margin: 0;
     font-family: Helvetica;
 }
@@ -126,10 +130,23 @@ video{
     color: white;
  }
 
- .menu > h1 {
+ .menu > .link > h1 {
     font-size: 2vh;
-    margin-right: 8%;
+    color: white;
+    transition: 0.3s;
+ }
+
+ .link {
+    margin-right: 30%;
     margin-left: 8%;
+ }
+
+ .link:hover {
+    text-decoration: none;
+ }
+
+.link:hover > h1 {
+    color: rgb(106, 106, 106);
  }
 
  .scrolled{
@@ -226,12 +243,13 @@ video{
 
 .css-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .container-in {
-    background-color: green;
+    background-color: black;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -263,6 +281,18 @@ video {
     font-size: 5vh;
     text-align: center;
 } 
+
+.logline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+    background-color: black;
+    color: white;
+    font-family: Helvetica;
+}
 
 .work-item{
     position: relative;
@@ -326,7 +356,6 @@ video {
 }
 
 .paragraph{
-    padding-top: 5vh;
     display: flex;
     flex-direction: column;
 }
@@ -359,11 +388,9 @@ video {
 .about {
     display: flex;
     width: 100%;
-    flex-direction: column;
-    justify-content: start;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-bottom: 2%;
+    justify-content: center;
+    padding: 2%;
+    background-color: black;
 }
 
 .about > .title {
@@ -376,4 +403,165 @@ video {
 
 .about > p {
     font-size: 2vh;
+}
+
+.social {
+    height: 3vh;
+}
+
+.ln {
+    margin-left: 2%;
+}
+
+div, p, h1 {
+    background-color: transparent;
+}
+
+/* -------------------- */
+
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    background-color: black;
+    padding: 5%;
+    padding-top: 2%;
+}
+
+.about-img {
+    width: 400vw;
+    margin-right: 3%;
+}
+
+.about-img > img {
+    width: 100%;
+}
+
+.about-desc {
+
+}
+
+.about-desc > p {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    text-align: left;
+    font-size: 2.5vh;
+}
+
+.about-title {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding-top: 2%;
+}
+
+.input {
+    margin: 2hv;
+    color: white
+}
+
+input {
+    outline: none;
+    border: none;
+    border-left: 2px solid white;
+    padding-left: 5%;
+    padding-right: 2%;
+    border-bottom: 10px white;
+    outline: 0 0 0 12px white;
+    transition: 0.5s;
+    color: white;
+    margin-bottom: 2hv;
+}
+
+input:focus {
+    border-left: 7px solid white;
+    outline: none;
+    color: white;
+    padding-right: 2%;
+    margin-bottom: 2hv;
+}
+
+textarea {
+    border: 2px solid white;
+    transition: 0.5s;
+    outline: none;
+    resize: none;
+    padding: 2%;
+    width: 50vw;
+    height: 20vh;
+    color: white;
+}
+
+textarea:focus {
+    outline: none;
+    border: 5px solid white;
+    color: white;
+    padding: 2%;
+}
+
+.contact-h1 {
+    margin-top: 4vh;
+    color: white;
+    font-family: Helvetica, sans-serif
+}
+
+.contact-desc {
+    width: 200vw;
+}
+
+.button {
+    margin-top:2vh
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: white;
+    font-family: Helvetica;
+    color: black;
+    padding: 1%;
+    transition: 0.5s;
+}
+
+button:focus {
+    background-color: rgb(164, 164, 164);
+}
+
+button:hover {
+    background-color: rgb(136, 136, 136);
+}
+
+.textarea {
+    color: white;
+}
+
+.contact-p{
+    color: white;
+    font-family: Helvetica;
+    font-size: 2.5vh;
+}
+
+.contact-or {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.or {
+    width: 5vw;
+    height: 0.1vh;
+    background-color: white;
+    margin: 2%;
+}
+
+.or.left{
+    margin-left: 0;
+}
+
+.contact-p-small{
+    color: white;
+    font-family: Helvetica;
+    font-size: 1.5vh;
+    text-align: center;
 }

@@ -1,33 +1,6 @@
 var w = window.innerWidth;
 var h = window.innerHeight;
-init();
 container();
-
-function init() {
-    document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
-    var modal = document.getElementById("modalC");
-    var modalH1 = document.getElementById("modal-h1");
-    var modalP = document.getElementById("modal-p");
-    var vh = 100/h
-    modalH1.style.fontSize = 25*vh + 'vh'
-    modalP.style.fontSize = 15*vh + 'vh'
-    var modalContainer = document.getElementById("modal-container");
-    modal.style.width = w + 'px'
-    modal.style.height = h + 'px'
-    modalContainer.style.height = h/3 + 'px'
-    modalContainer.style.maxWidth = w * 3/4 + 'px'
-    modalContainer.style.minWidth = w * 2/5 + 'px'
-    console.log('modal', modal)
-   /*  var list = document.getElementById("list");
-    var dropdown = document.getElementById("dropdown");
-    if(window.innerWidth < 600) {
-        list.style.display = 'none'
-        dropdown.style.display = 'inline-block'
-    } else {
-        dropdown.style.display = 'none'
-        list.style.display = 'flex'
-    } */
-}
 
 function buttonClick() {
     console.log('ciao')
@@ -51,13 +24,13 @@ function container() {
     works.style.width = window.innerWidth+'px';
     console.log('workitem', workItem)
     const divider = window.innerWidth > 1032
-        ? 3
+        ? 2
         : window.innerWidth < 1032 && window.innerWidth > 630
             ? 2
             : 1
     Object.keys(workItem).forEach(item => {
         workItem[item].style.width = (window.innerWidth / divider)+'px'
-        workItem[item].style.height = (window.innerWidth / divider)+'px'
+        workItem[item].style.height = ((window.innerWidth / divider) * 9 ) / 16+'px'
     })
 }
 
@@ -71,3 +44,16 @@ const header = document.getElementById("header");
       }
     }); */
 
+
+
+    /* function submit() {
+        Email.send({
+            Host: 'smtp.elasticemail.com 2525',
+            Username: 'website.portfolio.info@gmail.com',
+            Password: '69729EC67F1AD0085D12A4EC1E187340DD38',
+            To: 'website.portfolioco.info@gmail.com',
+            From: 'website.portfolioco.info@gmail.com',
+            Subject: 'TEST',
+            Body: 'Test'
+        }).then( message => alert(message) )
+    } */
