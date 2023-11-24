@@ -18,6 +18,17 @@ function buttonClick() {
 
 function container() {
     var container = document.getElementById("container");
+    var containerIn = document.getElementById("container-in");
+    var logline = document.getElementById("logline");
+    logline.style.height = h+'px'
+    if (w/h > 16/9) {
+        console.log('MAGGIORE')
+        const tenVH = (10*h)/100
+        containerIn.style.height = (h - tenVH) + 'px'
+    } else {
+        console.log('MINORE')
+        containerIn.style.width = w + 'px'
+    }
     var works = document.getElementById("works");
     var workItem = document.getElementsByClassName('work-item')
     container.style.width = w+'px';
