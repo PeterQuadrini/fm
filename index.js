@@ -17,10 +17,14 @@ function buttonClick() {
 }
 
 function container() {
+    console.log('RESIZE')
+    w = window.innerWidth;
+    h = window.innerHeight;
     var container = document.getElementById("container");
     var containerIn = document.getElementById("container-in");
     var logline = document.getElementById("logline");
     logline.style.height = h+'px'
+    logline.style.width = w+'px'
     if (w/h > 16/9) {
         console.log('MAGGIORE')
         const tenVH = (10*h)/100
@@ -68,3 +72,8 @@ const header = document.getElementById("header");
             Body: 'Test'
         }).then( message => alert(message) )
     } */
+
+    window.addEventListener("resize", function () {
+        console.log('R')
+        container()
+    });
